@@ -1,0 +1,14 @@
+{
+  "out": "images/eyecatch-05.svg",
+  "site": "士業DXノート",
+  "label": "今日の数字",
+  "color": "#6b46c1",
+  "big": "2.4倍",
+  "big_color": "#6b46c1",
+  "lines": ["小さな士業事務所の", "生成AI導入率（1年で）"],
+  "bubble": ["まず1業務から", "試すのが近道"],
+  "bubble_bg": "#f4f0fc",
+  "char": "images/char-05.svg",
+  "date": "2026.11.23",
+  "note": "数値は架空のサンプル"
+}

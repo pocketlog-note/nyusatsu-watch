@@ -1,0 +1,14 @@
+{
+  "out": "images/eyecatch-01.svg",
+  "site": "入札ウォッチ",
+  "label": "今日の数字",
+  "color": "#0b5cad",
+  "big": "62%",
+  "big_color": "#c0392b",
+  "lines": ["基幹システム標準化案件の", "1者応札率（上期142件）"],
+  "bubble": ["前年より", "14ポイント増です"],
+  "bubble_bg": "#eaf2fb",
+  "char": "images/char-01.svg",
+  "date": "2026.11.23",
+  "note": "数値は架空のサンプル"
+}

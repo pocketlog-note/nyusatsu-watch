@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>士業DXノート</title>
+<style>
+  :root{--bg:#fff;--ink:#1f2328;--sub:#636c76;--line:#e4e7eb;--accent:#6b46c1;--soft:#f4f0fc;--ng:#cf222e}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Hiragino Sans","Meiryo",sans-serif;line-height:1.9}
+  .mock{background:var(--soft);color:var(--accent);text-align:center;font-size:13px;padding:6px 16px}
+  header{border-bottom:1px solid var(--line)}
+  .bar{max-width:760px;margin:0 auto;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .logo{font-weight:800;font-size:18px}
+  .logo span{color:var(--accent)}
+  .sub{font-size:13px;color:var(--sub)}
+  main{max-width:760px;margin:0 auto;padding:26px 16px 60px}
+  .eyecatch{width:100%;height:auto;border-radius:8px;display:block;margin-bottom:18px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap}
+  .tags span{font-size:12px;background:var(--soft);color:var(--accent);padding:1px 10px;border-radius:12px}
+  h1{font-size:26px;line-height:1.5;margin:12px 0}
+  .byline{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--sub)}
+  .byline img{width:36px;height:36px;border-radius:50%;background:var(--soft)}
+  .lead{font-size:16px;font-weight:600;margin:20px 0;padding:14px 18px;background:var(--soft);border-radius:8px}
+  h2{font-size:20px;margin-top:36px}
+  .bars{margin:12px 0}
+  .row{display:grid;grid-template-columns:150px 1fr 44px;gap:10px;align-items:center;font-size:14px;margin:6px 0}
+  @media(max-width:520px){.row{grid-template-columns:110px 1fr 40px}}
+  .track{background:#f0f0f3;height:14px;border-radius:7px;overflow:hidden}
+  .fill{height:100%;background:var(--accent);border-radius:7px}
+  .fill.ng{background:var(--ng)}
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .compare div{border:1px solid var(--line);border-radius:8px;padding:12px 14px;text-align:center}
+  .compare b{display:block;font-size:32px;color:var(--accent)}
+  .compare span{font-size:12px;color:var(--sub)}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left}
+  th{width:34%;color:var(--sub);font-weight:600}
+  .facts{border:1px solid var(--line);border-radius:8px;padding:4px 18px 10px;margin-top:32px}
+  .facts h2{margin-top:12px;font-size:17px}
+  .facts ol{padding-left:20px;margin:0;font-size:14px}
+  .facts li{margin:6px 0}
+  .src{display:block;font-size:12px;color:var(--sub)}
+  .opinion{display:grid;grid-template-columns:72px 1fr;gap:14px;margin-top:26px;border:2px solid var(--accent);border-radius:12px;padding:18px}
+  .opinion img{width:72px;height:72px;border-radius:50%;background:var(--soft)}
+  .opinion .who{font-size:12px;color:var(--accent);font-weight:700}
+  .opinion h2{margin:2px 0 8px;font-size:17px}
+  .opinion p{margin:0 0 10px;font-size:15px}
+  .todo{background:var(--soft);border-radius:8px;padding:10px 14px;font-size:14px}
+  .disc{font-size:12px;color:var(--sub)}
+  .next{margin-top:22px;font-size:14px}
+  .next ul{padding-left:20px}
+  .foot{margin-top:28px;font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<div class="mock">モックアップです。調査・制度・数値・出典はすべて架空です。</div>
+<header><div class="bar"><div class="logo">士業<span>DX</span>ノート</div><div class="sub">小さな士業事務所の、IT・AI導入ニュース</div></div></header>
+<main>
+  <img class="eyecatch" src="images/eyecatch-05.svg" alt="今日の数字：小さな士業事務所の生成AI導入率が1年で2.4倍">
+  <div class="tags"><span>ニュース</span><span>調査</span><span>生成AI</span><span>補助金</span></div>
+  <h1>小規模な士業事務所の生成AI導入率が29%に<br>1年で2.4倍、未導入の理由は「情報漏えいが心配」が最多</h1>
+  <div class="byline"><img src="images/char-05.svg" alt="">文：ペン子（AIキャラクター）／確認：士業DXノート編集部　｜　2026年11月23日</div>
+
+  <p class="lead">所員5人以下の士業事務所のうち、生成AIを業務で使っている事務所は29%で、前年の12%から2.4倍に増えました。使っていない事務所が挙げた理由で最も多かったのは「顧客情報の漏えいが心配」（58%）です。</p>
+
+  <div class="compare">
+    <div><span>2025年調査</span><b>12%</b></div>
+    <div><span>2026年調査</span><b>29%</b></div>
+  </div>
+
+  <h2>使い道は「文書の下書き」が最多</h2>
+  <p>導入している事務所に用途を聞いたところ（複数回答）、文書の下書きが68%、法令や通達の要約が54%でした。書類のチェックに使っている事務所は22%にとどまります。</p>
+  <div class="bars">
+    <div class="row"><span>文書の下書き</span><div class="track"><div class="fill" style="width:68%"></div></div><span>68%</span></div>
+    <div class="row"><span>法令・通達の要約</span><div class="track"><div class="fill" style="width:54%"></div></div><span>54%</span></div>
+    <div class="row"><span>顧客へのメール</span><div class="track"><div class="fill" style="width:41%"></div></div><span>41%</span></div>
+    <div class="row"><span>書類のチェック</span><div class="track"><div class="fill" style="width:22%"></div></div><span>22%</span></div>
+  </div>
+
+  <h2>使わない理由の1位は情報漏えいへの懸念</h2>
+  <div class="bars">
+    <div class="row"><span>顧客情報の漏えい</span><div class="track"><div class="fill ng" style="width:58%"></div></div><span>58%</span></div>
+    <div class="row"><span>使い方がわからない</span><div class="track"><div class="fill ng" style="width:37%"></div></div><span>37%</span></div>
+    <div class="row"><span>費用が高い</span><div class="track"><div class="fill ng" style="width:21%"></div></div><span>21%</span></div>
+  </div>
+
+  <h2>デジタル化の補助金、12月1日から公募</h2>
+  <p>小規模事業者のデジタル化を支援する補助金の第3回公募が12月1日に始まります。今回からAIツールの利用料も対象に加わりました。</p>
+  <table>
+    <tr><th>公募期間</th><td>2026年12月1日〜2027年1月30日</td></tr>
+    <tr><th>補助率・上限</th><td>費用の2分の1、上限150万円</td></tr>
+    <tr><th>主な対象</th><td>業務ソフト、クラウドサービス、AIツールの利用料（最大2年分）</td></tr>
+  </table>
+
+  <section class="facts">
+    <h2>この記事のファクト</h2>
+    <ol>
+      <li>所員5人以下の士業事務所の生成AI導入率は29%（前年12%）<span class="src">出典：小規模士業ネットワーク「事務所のIT利用調査2026」回答1,240事務所（架空）</span></li>
+      <li>用途は文書の下書き68%、法令・通達の要約54%、書類チェック22%<span class="src">出典：同調査（複数回答）</span></li>
+      <li>未導入の理由は情報漏えいへの懸念58%、使い方がわからない37%<span class="src">出典：同調査（複数回答）</span></li>
+      <li>デジタル化補助金の第3回公募は12月1日開始、AIツールの利用料が新たに対象<span class="src">出典：所管省庁の公募要領（2026年11月20日公表、架空）</span></li>
+    </ol>
+  </section>
+
+  <section class="opinion">
+    <img src="images/char-05.svg" alt="ペン子">
+    <div>
+      <div class="who">ペン子の見解</div>
+      <h2>「入れない情報」を先に決めれば、怖さは減らせる</h2>
+      <p>使わない理由の1位が情報漏えいの心配というのは、慎重な士業らしい結果だなと思います。ただ、その心配の中身は「何を入力していいのかわからない」ことである場合が多いんですよね。</p>
+      <p>氏名やマイナンバー、給与額など、「入力しない情報」の一覧を先に作ってしまえば、文書の下書きや法令の要約のように顧客情報を含まない使い方から始められます。今回から補助金の対象にもなったので、費用の面でも試しやすくなりました。</p>
+      <div class="todo"><b>明日からできること：</b>事務所で「AIに入力しない情報」を5つ書き出して、所内で共有する。</div>
+      <p class="disc">※見解はファクトをもとにした本誌キャラクターの意見です。個別の法的判断や、特定の製品をおすすめするものではありません。</p>
+    </div>
+  </section>
+
+  <div class="next"><b>次に注目する点</b><ul><li>補助金の採択結果で、AIツールの申請がどれだけ通るか</li><li>書類チェック用途（現在22%）が伸びるかどうか</li></ul></div>
+
+  <p class="foot">士業DXノートは、公開された調査・制度・料金改定を毎日集めて伝えます。事務所での導入の結果（費用・失敗した点）の情報提供も受け付けています。</p>
+</main>
+</body>
+</html>

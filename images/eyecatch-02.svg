@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#1d1f21"/>
+<rect x="36" y="36" width="1128" height="558" rx="28" fill="#fff"/>
+<text x="86" y="120" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1d1f21">中古機械相場ナビ<tspan fill="#888" font-weight="400">　｜　今日の相場</tspan></text>
+<text x="80" y="300" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="170" font-weight="800" fill="#e0574f">-4.2%</text>
+<text x="86" y="385" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">中古NC旋盤の相場指数</text>
+<text x="86" y="447" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">10〜11月期は94.1（前期比）</text>
+<text x="86" y="556" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="26" fill="#888">2026.11.23　／　数値は架空のサンプル</text>
+<rect x="760" y="78" width="360" height="152" rx="22" fill="#fff3d6"/>
+<path d="M930 230 L962 266 L980 230 Z" fill="#fff3d6"/>
+<text x="940" y="148" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">8インチは</text>
+<text x="940" y="194" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">5.1%安です</text>
+<g transform="translate(830,262) scale(1.5)"><circle cx="50" cy="78" r="20" fill="#8d6e4f"/><circle cx="150" cy="78" r="20" fill="#8d6e4f"/>
+<circle cx="100" cy="118" r="68" fill="#8d6e4f"/>
+<ellipse cx="100" cy="142" rx="34" ry="26" fill="#d9c2a3"/>
+<circle cx="76" cy="110" r="7" fill="#1d1f21"/><circle cx="124" cy="110" r="7" fill="#1d1f21"/>
+<ellipse cx="100" cy="132" rx="11" ry="8" fill="#1d1f21"/>
+<path d="M88 152 Q100 160 112 152" stroke="#1d1f21" stroke-width="4" fill="none"/>
+<path d="M36 84 Q100 0 164 84 Z" fill="#f0a500"/>
+<rect x="28" y="78" width="144" height="13" rx="6" fill="#d48f00"/>
+<rect x="94" y="28" width="12" height="50" rx="4" fill="#d48f00"/></g>
+</svg>

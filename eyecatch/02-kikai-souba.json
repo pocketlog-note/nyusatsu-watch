@@ -1,0 +1,14 @@
+{
+  "out": "images/eyecatch-02.svg",
+  "site": "中古機械相場ナビ",
+  "label": "今日の相場",
+  "color": "#1d1f21",
+  "big": "-4.2%",
+  "big_color": "#e0574f",
+  "lines": ["中古NC旋盤の相場指数", "10〜11月期は94.1（前期比）"],
+  "bubble": ["8インチは", "5.1%安です"],
+  "bubble_bg": "#fff3d6",
+  "char": "images/char-02.svg",
+  "date": "2026.11.23",
+  "note": "数値は架空のサンプル"
+}

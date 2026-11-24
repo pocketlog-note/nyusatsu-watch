@@ -1,0 +1,15 @@
+{
+  "out": "images/eyecatch-04.svg",
+  "site": "葬祭ビジネス定点",
+  "label": "定点観測",
+  "color": "#3e5c52",
+  "big": "5.8日",
+  "big_color": "#3e5c52",
+  "lines": ["首都圏の火葬待ち（平均）", "斎場32か所・4週間の記録"],
+  "bubble": ["金・土は", "1〜2日長めです"],
+  "bubble_bg": "#e6ece9",
+  "char": "images/char-04.svg",
+  "date": "2026.11.23",
+  "note": "数値は架空のサンプル",
+  "tone": "calm"
+}

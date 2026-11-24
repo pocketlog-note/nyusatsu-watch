@@ -1,0 +1,14 @@
+{
+  "out": "images/eyecatch-03.svg",
+  "site": "湯屋経営",
+  "label": "今週の数字",
+  "color": "#a8372b",
+  "big": "14軒",
+  "big_color": "#a8372b",
+  "lines": ["都内の銭湯の廃業（4〜10月）", "開業は3軒、A重油は8%高"],
+  "bubble": ["補助の申請は", "12月15日まで"],
+  "bubble_bg": "#f4efe6",
+  "char": "images/char-03.svg",
+  "date": "2026.11.23",
+  "note": "数値は架空のサンプル"
+}

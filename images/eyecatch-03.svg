@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#a8372b"/>
+<rect x="36" y="36" width="1128" height="558" rx="28" fill="#fff"/>
+<text x="86" y="120" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#a8372b">湯屋経営<tspan fill="#888" font-weight="400">　｜　今週の数字</tspan></text>
+<text x="80" y="300" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="170" font-weight="800" fill="#a8372b">14軒</text>
+<text x="86" y="385" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">都内の銭湯の廃業（4〜10月）</text>
+<text x="86" y="447" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">開業は3軒、A重油は8%高</text>
+<text x="86" y="556" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="26" fill="#888">2026.11.23　／　数値は架空のサンプル</text>
+<rect x="760" y="78" width="360" height="152" rx="22" fill="#f4efe6"/>
+<path d="M930 230 L962 266 L980 230 Z" fill="#f4efe6"/>
+<text x="940" y="148" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">補助の申請は</text>
+<text x="940" y="194" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">12月15日まで</text>
+<g transform="translate(830,262) scale(1.5)"><circle cx="100" cy="118" r="68" fill="#5aa469"/>
+<path d="M44 82 L56 64 L66 78 L78 60 L90 76 L100 58 L110 76 L122 60 L134 78 L144 64 L156 82" fill="none" stroke="#2f6b3c" stroke-width="7" stroke-linejoin="round"/>
+<ellipse cx="100" cy="62" rx="42" ry="13" fill="#eef6f0" stroke="#2f6b3c" stroke-width="4"/>
+<circle cx="76" cy="108" r="14" fill="#fff"/><circle cx="124" cy="108" r="14" fill="#fff"/>
+<circle cx="79" cy="110" r="7" fill="#2b2521"/><circle cx="121" cy="110" r="7" fill="#2b2521"/>
+<path d="M76 132 Q100 158 124 132 Q100 142 76 132 Z" fill="#f2c14e"/>
+<circle cx="58" cy="132" r="8" fill="#f4a0a0" opacity=".7"/><circle cx="142" cy="132" r="8" fill="#f4a0a0" opacity=".7"/>
+<rect x="50" y="168" width="100" height="16" rx="6" fill="#fff" stroke="#a8372b" stroke-width="3"/></g>
+</svg>

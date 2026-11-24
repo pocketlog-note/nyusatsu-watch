@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#0b5cad"/>
+<rect x="36" y="36" width="1128" height="558" rx="28" fill="#fff"/>
+<text x="86" y="120" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#0b5cad">入札ウォッチ<tspan fill="#888" font-weight="400">　｜　今日の数字</tspan></text>
+<text x="80" y="300" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="170" font-weight="800" fill="#c0392b">62%</text>
+<text x="86" y="385" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">基幹システム標準化案件の</text>
+<text x="86" y="447" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="48" font-weight="700" fill="#1c2430">1者応札率（上期142件）</text>
+<text x="86" y="556" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="26" fill="#888">2026.11.23　／　数値は架空のサンプル</text>
+<rect x="760" y="78" width="360" height="152" rx="22" fill="#eaf2fb"/>
+<path d="M930 230 L962 266 L980 230 Z" fill="#eaf2fb"/>
+<text x="940" y="148" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">前年より</text>
+<text x="940" y="194" text-anchor="middle" font-family="Yu Gothic UI, Hiragino Sans, Meiryo, sans-serif" font-size="34" font-weight="700" fill="#1c2430">14ポイント増です</text>
+<g transform="translate(830,262) scale(1.5)"><path d="M45 70 L58 30 L82 58 Z M155 70 L142 30 L118 58 Z" fill="#0b5cad"/>
+<ellipse cx="100" cy="115" rx="68" ry="72" fill="#0b5cad"/>
+<ellipse cx="100" cy="138" rx="42" ry="44" fill="#cfe1f5"/>
+<circle cx="74" cy="92" r="24" fill="#fff" stroke="#1c2430" stroke-width="5"/>
+<circle cx="126" cy="92" r="24" fill="#fff" stroke="#1c2430" stroke-width="5"/>
+<line x1="98" y1="92" x2="102" y2="92" stroke="#1c2430" stroke-width="5"/>
+<circle cx="78" cy="94" r="9" fill="#1c2430"/><circle cx="122" cy="94" r="9" fill="#1c2430"/>
+<path d="M91 114 L109 114 L100 129 Z" fill="#f0a500"/>
+<path d="M78 150 h44 M78 162 h44 M78 174 h30" stroke="#0b5cad" stroke-width="4" opacity=".5"/></g>
+</svg>

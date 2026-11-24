@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ニッチニュース5案</title>
+<style>
+  :root{--bg:#f7f7f5;--paper:#fff;--ink:#222;--sub:#666;--line:#e2e2de;--accent:#2a6f97}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Gothic UI","Meiryo",sans-serif;line-height:1.8}
+  main{max-width:1000px;margin:0 auto;padding:28px 16px 60px}
+  h1{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--sub);font-size:14px}
+  .rule{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:20px 0;font-size:14px}
+  .rule b{color:var(--accent)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px 18px;display:flex;flex-direction:column}
+  .card h2{font-size:17px;margin:0}
+  .card .no{font-size:12px;color:var(--accent);font-weight:700}
+  .card dl{margin:10px 0;font-size:13px}
+  .card dt{color:var(--sub);font-size:12px;margin-top:6px}
+  .card dd{margin:0}
+  .card a{margin-top:auto;display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:6px 12px;border-radius:6px;font-size:13px;text-align:center}
+  .tbl{overflow-x:auto;margin-top:30px}
+  table{border-collapse:collapse;width:100%;min-width:720px;background:var(--paper);font-size:13px}
+  th,td{border:1px solid var(--line);padding:8px;text-align:center}
+  th{background:#eef2f4}
+  td:first-child{text-align:left;font-weight:600}
+  .rec{background:#fff8e6;border:1px solid #f0d48a;border-radius:8px;padding:14px 18px;margin-top:24px;font-size:14px}
+  h2.sec{font-size:19px;margin:36px 0 12px;border-left:4px solid var(--accent);padding-left:10px}
+  .chars{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+  .ch{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center;font-size:13px}
+  .ch img{width:80px;height:80px}
+  .ch b{display:block;font-size:15px}
+  .ch .site{color:var(--sub);font-size:12px}
+  .ch p{text-align:left;margin:6px 0 0}
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;counter-reset:f}
+  .flow div{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;counter-increment:f}
+  .flow div::before{content:counter(f);display:inline-block;width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;text-align:center;line-height:20px;font-size:12px;margin-right:6px}
+  .flow b{font-size:14px}
+  .flow .human{border:2px solid #f0a500}
+  .shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .shots img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}
+  .format{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:12px 18px;font-size:14px}
+  .format ol{margin:4px 0;padding-left:20px}
+</style>
+</head>
+<body>
+<main>
+  <h1>ニッチ業界ニュースサイト 5案</h1>
+  <div class="sub">各案の記事モックアップ付き。記事中の数値・団体・人物はすべて架空です。</div>
+
+  <div class="rule"><b>キュレーションにしないための共通ルール</b>　他サイトの記事を要約して載せない。どの記事にも「自分で集めた一次データ」を必ず1つ入れ、出典つきのファクトとして示す。意見は「キャラクターの見解」欄に分けて書き、本文には混ぜない。</div>
+
+  <h2 class="sec">記事の形（全サイト共通）</h2>
+  <div class="format"><ol>
+    <li>アイキャッチ画像（今日の数字＋キャラクターのひとこと）</li>
+    <li>数字入りのニュース見出し、署名「文：キャラクター（AI）／確認：編集部」</li>
+    <li>リードと本文（ファクトと図表のみ）</li>
+    <li>この記事のファクト（番号つき・出典つき）</li>
+    <li>キャラクターの見解（意見はここだけ）</li>
+    <li>次に注目する点、集計方法</li>
+  </ol></div>
+
+  <h2 class="sec">キャラクター</h2>
+  <div class="chars">
+    <div class="ch"><img src="images/char-01.svg" alt=""><b>ミハル</b><span class="site">入札ウォッチ</span><p>夜通し公告を読むフクロウ。冷静で、数字を先に言う。団体や企業を名指しで責めない。</p></div>
+    <div class="ch"><img src="images/char-02.svg" alt=""><b>ゲン</b><span class="site">中古機械相場ナビ</span><p>元旋盤工のクマ。短く率直。売る側・買う側それぞれに一言。</p></div>
+    <div class="ch"><img src="images/char-03.svg" alt=""><b>湯太郎</b><span class="site">湯屋経営</span><p>銭湯めぐりが趣味のカッパ。厳しい数字も正直に伝え、打てる手を1つ示す。</p></div>
+    <div class="ch"><img src="images/char-04.svg" alt=""><b>しずか</b><span class="site">葬祭ビジネス定点</span><p>定点観測係の黒猫。静かで丁寧。冗談やあおる表現は使わない。</p></div>
+    <div class="ch"><img src="images/char-05.svg" alt=""><b>ペン子</b><span class="site">士業DXノート</span><p>事務所の書記ペンギン。実務的で、「明日からできること」を必ず1つ添える。</p></div>
+  </div>
+
+  <h2 class="sec">毎日の投稿の流れ（案）</h2>
+  <div class="flow">
+    <div><b>集める</b><br>公告・相場・空き枠などを決まった時刻に自動で取得</div>
+    <div><b>ファクト化</b><br>前日との差や集計値を出し、出典つきの一覧にする</div>
+    <div><b>下書き</b><br>AIがキャラクターの口調で、本文と見解を書く</div>
+    <div><b>画像</b><br>今日の数字を JSON に入れ、スクリプトでアイキャッチを作る</div>
+    <div class="human"><b>人が確認</b><br>数字・出典・見解の行き過ぎを見て公開を判断</div>
+    <div><b>投稿</b><br>ポケットログの投稿の仕組みで記事とSNSに出す</div>
+  </div>
+
+  <h2 class="sec">アイキャッチ画像（自動生成）</h2>
+  <div class="shots">
+    <img src="images/eyecatch-01.svg" alt="入札ウォッチのアイキャッチ">
+    <img src="images/eyecatch-02.svg" alt="中古機械相場ナビのアイキャッチ">
+    <img src="images/eyecatch-03.svg" alt="湯屋経営のアイキャッチ">
+    <img src="images/eyecatch-04.svg" alt="葬祭ビジネス定点のアイキャッチ">
+    <img src="images/eyecatch-05.svg" alt="士業DXノートのアイキャッチ">
+  </div>
+
+  <h2 class="sec">各サイトの記事</h2>
+
+  <div class="cards">
+    <div class="card"><div class="no">案1 ／ 公開データ集計型</div><h2>入札ウォッチ</h2><dl>
+      <dt>読者</dt><dd>自治体向けITベンダーの営業、議員・記者</dd>
+      <dt>独自のネタ</dt><dd>各自治体の入札公告・結果を集めて、応札者数や落札率を集計</dd>
+      <dt>収益</dt><dd>新着公告のメール配信（月額）、CSV販売</dd></dl>
+      <a href="01-nyusatsu.html">記事を見る</a></div>
+
+    <div class="card"><div class="no">案2 ／ 相場インデックス型</div><h2>中古機械相場ナビ</h2><dl>
+      <dt>読者</dt><dd>町工場の経営者、中古機械の買取・販売業者</dd>
+      <dt>独自のネタ</dt><dd>オークション成約価格と読者提供の見積書から相場指数を作る</dd>
+      <dt>収益</dt><dd>成約価格DBの有料会員、買取業者の広告</dd></dl>
+      <a href="02-kikai-souba.html">記事を見る</a></div>
+
+    <div class="card"><div class="no">案3 ／ 開業・廃業と経費の集計型</div><h2>湯屋経営</h2><dl>
+      <dt>読者</dt><dd>銭湯・サウナ・温浴施設の経営者、承継を考える人</dd>
+      <dt>独自のネタ</dt><dd>開業・廃業の記録、燃料価格・入浴料金の動きの集計</dd>
+      <dt>収益</dt><dd>設備・燃料業者の広告、事業承継の仲介紹介</dd></dl>
+      <a href="03-sento.html">記事を見る</a></div>
+
+    <div class="card"><div class="no">案4 ／ 定点観測型</div><h2>葬祭ビジネス定点</h2><dl>
+      <dt>読者</dt><dd>葬儀社、安置施設・関連サービスの事業者</dd>
+      <dt>独自のネタ</dt><dd>斎場の予約枠を毎日記録して、火葬待ち日数を出す</dd>
+      <dt>収益</dt><dd>地域別の週次レポート（有料）、業者向け広告</dd></dl>
+      <a href="04-sosai.html">記事を見る</a></div>
+
+    <div class="card"><div class="no">案5 ／ 調査・制度の速報型</div><h2>士業DXノート</h2><dl>
+      <dt>読者</dt><dd>小規模な社労士・税理士・行政書士の事務所</dd>
+      <dt>独自のネタ</dt><dd>公開された調査・補助金・料金改定を集めて、事務所目線で整理</dd>
+      <dt>収益</dt><dd>導入支援の相談受付（副業と直結）、ツール紹介</dd></dl>
+      <a href="05-shigyo-ai.html">記事を見る</a></div>
+  </div>
+
+  <div class="tbl"><table>
+    <tr><th>比較</th><th>案1 入札</th><th>案2 機械相場</th><th>案3 銭湯</th><th>案4 葬祭</th><th>案5 士業DX</th></tr>
+    <tr><td>自動化のしやすさ（記事の仕組みとの相性）</td><td>◎ 収集→集計→記事化</td><td>○ データ入手が鍵</td><td>△ 取材が必要</td><td>◎ 毎日自動で記録</td><td>△ 取材が必要</td></tr>
+    <tr><td>一次データの集めやすさ</td><td>◎ 公開情報</td><td>△ 提携先が必要</td><td>△ 人脈次第</td><td>○ 公開画面＋電話</td><td>○ 自分の案件が素材</td></tr>
+    <tr><td>競合の少なさ</td><td>○</td><td>◎</td><td>◎</td><td>○</td><td>△</td></tr>
+    <tr><td>お金を払う読者がいるか</td><td>◎ 営業の情報源</td><td>◎ 売買の判断材料</td><td>△ 小規模経営者</td><td>○ 葬儀社</td><td>○ 相談につながる</td></tr>
+    <tr><td>注意点</td><td>サイトごとに形式がばらばら</td><td>データ提供元との契約</td><td>更新頻度を保ちにくい</td><td>扱う題材への配慮、収集頻度とサイト規約</td><td>守秘義務への配慮</td></tr>
+  </table></div>
+
+  <div class="rec"><b>おすすめ：まず案1（入札ウォッチ）、次に案5。</b>　案1は公開データだけで記事が作れ、「収集→集計→記事の下書き」を仕組み化しやすいため、いま作っている投稿の仕組みを流用しやすい案です。案5は取材が要りますが、ご自身の副業（個人事業）の集客と直接つながります。</div>
+</main>
+</body>
+</html>

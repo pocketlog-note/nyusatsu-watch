@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>湯屋経営</title>
+<style>
+  :root{--bg:#f4efe6;--paper:#fffdf8;--ink:#2b2521;--sub:#7a6e63;--line:#e2d8c8;--accent:#a8372b;--ai:#1f4e79}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Yu Mincho","Hiragino Mincho ProN","BIZ UDPMincho",serif;line-height:2}
+  .mock{background:var(--ai);color:#fff;text-align:center;font-size:13px;padding:6px 16px;font-family:sans-serif}
+  header{text-align:center;padding:26px 16px 14px;border-bottom:1px solid var(--line)}
+  .logo{font-size:34px;font-weight:700;letter-spacing:.3em;color:var(--accent)}
+  .tag{font-size:13px;color:var(--sub);font-family:sans-serif}
+  nav{font-family:sans-serif;font-size:13px;color:var(--sub);display:flex;justify-content:center;gap:18px;margin-top:10px;flex-wrap:wrap}
+  main{max-width:720px;margin:0 auto;padding:30px 16px 60px}
+  .eyecatch{width:100%;height:auto;border-radius:6px;display:block;margin-bottom:20px}
+  .cat{font-family:sans-serif;font-size:12px;color:var(--accent);border:1px solid var(--accent);display:inline-block;padding:0 10px;border-radius:20px}
+  h1{font-size:28px;line-height:1.6;margin:14px 0}
+  @media(max-width:560px){h1{font-size:22px}}
+  .byline{display:flex;align-items:center;gap:10px;font-family:sans-serif;font-size:13px;color:var(--sub)}
+  .byline img{width:36px;height:36px;flex:none;border-radius:50%;background:var(--paper);border:1px solid var(--line)}
+  .lead{font-weight:700;margin:22px 0;padding:14px 18px;background:var(--paper);border-left:4px solid var(--accent)}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin:26px 0;font-family:sans-serif}
+  .card h3{margin:0 0 10px;font-size:15px;color:var(--ai)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 20px;font-size:14px}
+  @media(max-width:520px){.grid{grid-template-columns:minmax(0,1fr)}}
+  .grid div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted var(--line)}
+  .grid b{font-variant-numeric:tabular-nums;white-space:nowrap}
+  h2{font-size:21px;margin-top:40px;color:var(--accent)}
+  .tbl{overflow-x:auto;margin:14px 0}
+  .compare{font-family:sans-serif;font-size:14px;width:100%;min-width:480px;border-collapse:collapse}
+  .compare th,.compare td{border:1px solid var(--line);padding:6px 8px;text-align:center;font-variant-numeric:tabular-nums}
+  .compare th{background:#efe6d7}
+  .bars{font-family:sans-serif;margin:12px 0}
+  .row{display:grid;grid-template-columns:150px minmax(0,1fr) 44px;gap:10px;align-items:center;font-size:14px;margin:6px 0}
+  @media(max-width:520px){.row{grid-template-columns:120px minmax(0,1fr) 40px}}
+  .track{background:#ebe3d5;height:14px;border-radius:3px;overflow:hidden}
+  .fill{height:100%;background:var(--accent)}
+  .tracker{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:16px 20px;font-family:sans-serif;font-size:14px;margin-top:36px}
+  .tracker h3{margin:0 0 6px;font-size:15px}
+  .tracker ul{padding-left:20px;margin:0}
+  .tracker li{margin:2px 0}
+  .open{color:#2e7d4f}.close{color:var(--accent)}
+  .facts{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:6px 20px 12px;margin-top:32px;font-family:sans-serif}
+  .facts h2{font-size:17px;margin-top:12px}
+  .facts ol{padding-left:20px;margin:0;font-size:14px;line-height:1.8}
+  .facts li{margin:6px 0}
+  .src{display:block;font-size:12px;color:var(--sub)}
+  .opinion{display:grid;grid-template-columns:72px minmax(0,1fr);gap:14px;margin-top:26px;background:var(--paper);border:2px solid var(--accent);border-radius:10px;padding:18px}
+  @media(max-width:420px){.opinion{grid-template-columns:minmax(0,1fr)}}
+  .opinion img{width:72px;height:72px;border-radius:50%;background:var(--bg)}
+  .opinion .who{font-family:sans-serif;font-size:12px;color:var(--accent);font-weight:700}
+  .opinion h2{margin:2px 0 8px;font-size:18px;line-height:1.6}
+  .opinion p{margin:0 0 10px;font-size:16px}
+  .opinion .disc{font-family:sans-serif;font-size:12px;color:var(--sub);margin:0}
+  .next{margin-top:22px;font-family:sans-serif;font-size:14px}
+  .next ul{padding-left:20px}
+  .method{font-family:sans-serif;font-size:13px;color:var(--sub);background:#efe8dc;padding:14px 16px;margin-top:24px;border-radius:4px;line-height:1.8}
+  .method b{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="mock">モックアップです。店名・団体名・数値・出典はすべて架空です。</div>
+<header>
+  <div class="logo">湯屋経営</div>
+  <div class="tag">銭湯・サウナ・温浴施設の経営者のためのニュース</div>
+  <nav><span>経営の数字</span><span>燃料・設備</span><span>開業・廃業</span><span>補助金</span><span>求人</span></nav>
+</header>
+
+<main>
+  <img class="eyecatch" src="images/eyecatch-03.svg" alt="今週の数字：都内の銭湯の廃業は4〜10月で14軒、開業は3軒">
+  <span class="cat">ニュース｜開業・廃業と燃料</span>
+  <h1>都内の銭湯、今年度の廃業14軒・開業3軒<br>A重油は前年比8%高、入浴料金の上限は1月から580円に</h1>
+  <div class="byline"><img src="images/char-03.svg" alt="">文：湯太郎（AIキャラクター）／確認：湯屋経営編集部　｜　2026年11月23日</div>
+
+  <p class="lead">東京都内で2026年4〜10月に廃業した銭湯は14軒、開業は3軒でした。10月末の営業数は441軒で、年度初めの452軒から11軒減っています。銭湯が使うA重油の配送価格は10月平均で1リットル118.6円となり、前年同月より8.0%上がりました。</p>
+
+  <div class="card">
+    <h3>今週の数字（都内）</h3>
+    <div class="grid">
+      <div>廃業（4〜10月）<b>14軒</b></div><div>開業（4〜10月）<b>3軒</b></div>
+      <div>営業数（10月末）<b>441軒</b></div><div>営業数（4月1日）<b>452軒</b></div>
+      <div>A重油（10月平均）<b>118.6円/L</b></div><div>前年同月<b>109.8円/L</b></div>
+      <div>売上に占める燃料費<b>17.4%</b></div><div>前年の調査<b>15.9%</b></div>
+    </div>
+  </div>
+
+  <h2>月別の廃業・開業</h2>
+  <p>廃業は6月と9月に3軒ずつありました。前年の同じ期間は廃業11軒、開業2軒です。開業3軒の内訳は、新築が1軒、事業承継による再開が2軒でした。</p>
+  <div class="tbl"><table class="compare">
+    <tr><th></th><th>4月</th><th>5月</th><th>6月</th><th>7月</th><th>8月</th><th>9月</th><th>10月</th><th>計</th></tr>
+    <tr><td>廃業</td><td>2</td><td>1</td><td>3</td><td>2</td><td>1</td><td>3</td><td>2</td><td><b>14</b></td></tr>
+    <tr><td>開業</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td><b>3</b></td></tr>
+  </table></div>
+
+  <h2>廃業の理由は設備の老朽化が最多</h2>
+  <p>廃業した14軒が組合に届け出た理由は、設備の老朽化が6軒、後継者がいないが5軒、燃料費などによる採算の悪化が3軒でした。</p>
+  <div class="bars">
+    <div class="row"><span>設備の老朽化</span><div class="track"><div class="fill" style="width:43%"></div></div><span>6軒</span></div>
+    <div class="row"><span>後継者がいない</span><div class="track"><div class="fill" style="width:36%"></div></div><span>5軒</span></div>
+    <div class="row"><span>採算の悪化</span><div class="track"><div class="fill" style="width:21%"></div></div><span>3軒</span></div>
+  </div>
+
+  <h2>燃料費が売上に占める割合は17.4%</h2>
+  <p>本誌が10月に都内の銭湯経営者に行ったアンケート（回答68軒）では、燃料費が売上に占める割合は平均17.4%でした。前年の調査では15.9%です。</p>
+
+  <h2>入浴料金の上限は1月から580円</h2>
+  <p>都の公衆浴場の料金を審議する協議会は11月18日、大人の入浴料金の上限を550円から580円に引き上げる答申をまとめました。2027年1月1日から適用されます。引き上げ幅は30円で、率にすると5.5%です。</p>
+
+  <h2>燃料費の補助は12月15日締め切り</h2>
+  <p>都は公衆浴場向けに燃料費の緊急支援を行っています。1軒あたりの上限は60万円で、申請の受付は12月15日までです。11月20日時点で申請したのは178軒で、都内の銭湯の約4割にあたります。</p>
+
+  <div class="tracker">
+    <h3>10月の都内の開業・廃業（本誌調べ）</h3>
+    <ul>
+      <li class="close">廃業　足立区の銭湯（1961年創業）　設備の老朽化</li>
+      <li class="close">廃業　杉並区の銭湯（1955年創業）　後継者がいない</li>
+      <li class="open">再開　墨田区の銭湯　事業承継（30代の元会社員が継承）</li>
+    </ul>
+  </div>
+
+  <section class="facts">
+    <h2>この記事のファクト</h2>
+    <ol>
+      <li>都内の銭湯の廃業は2026年4〜10月で14軒、開業は3軒（前年同期は廃業11軒、開業2軒）<span class="src">出典：都内の浴場組合の会員異動報告（2026年11月5日公表、架空）と本誌の聞き取り</span></li>
+      <li>廃業の理由は設備の老朽化6軒、後継者がいない5軒、採算の悪化3軒<span class="src">出典：同報告（廃業届に記された理由）</span></li>
+      <li>A重油の配送価格は10月平均で1リットル118.6円、前年同月の109.8円から8.0%上昇<span class="src">出典：石油製品流通調査会「小口配送価格月報」2026年10月分（架空）</span></li>
+      <li>大人の入浴料金の上限を550円から580円に引き上げる答申、2027年1月1日から適用<span class="src">出典：都公衆浴場料金協議会の答申（2026年11月18日、架空）</span></li>
+      <li>燃料費の緊急支援は1軒あたり上限60万円、申請は12月15日まで。11月20日時点の申請は178軒<span class="src">出典：都の担当課の公表資料（2026年11月20日、架空）</span></li>
+    </ol>
+  </section>
+
+  <section class="opinion">
+    <img src="images/char-03.svg" alt="湯太郎">
+    <div>
+      <div class="who">湯太郎の見解</div>
+      <h2>まずは12月15日までに燃料費の補助を申請してほしい</h2>
+      <p>半年あまりで14軒が店を閉めました。ぼくが通ったことのあるお湯もこの中に入っています。正直、燃料が8%上がるなかで、入浴料金の30円の引き上げだけで埋めるのは難しいと思います。売上の17.4%が燃料という店なら、燃料が8%上がるとそれだけで売上の1.4%ぶんが消える計算です。</p>
+      <p>そこで個人的にいちばん先にやってほしいのが、12月15日が締め切りの燃料費の補助の申請です。上限は60万円で、まだ申請していない店が6割ほどあるんですよね。申請に必要な書類を、都の案内で早めに確かめておくと安心です。</p>
+      <p class="disc">※見解はファクトをもとにした本誌キャラクターの意見です。特定の店や事業者の評価ではありません。</p>
+    </div>
+  </section>
+
+  <div class="next"><b>次に注目する点</b><ul><li>12月15日の締め切りまでに、補助の申請が何軒まで増えるか（11月20日時点で178軒）</li><li>1月の料金改定のあと、来客数がどう動くか</li></ul></div>
+
+  <div class="method"><b>集計方法</b>　開業・廃業は組合の会員異動報告をもとに、組合に加盟していない店は本誌が区市町村の公衆浴場の届出情報と電話で確かめました。燃料費の割合は、10月に本誌が都内の銭湯経営者に送ったアンケート（回答68軒）の平均です。</div>
+</main>
+</body>
+</html>
