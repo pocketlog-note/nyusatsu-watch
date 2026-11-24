@@ -36,7 +36,12 @@
 
 ## 定期運用（2026-11-23 開始）
 - 定期タスク `nyusatsu-watch-daily`（毎日10時30分ごろ。Claude アプリが起動中のとき。閉じていれば次回起動時）。Auto モードで保存。
-- 毎日 `collect.py` を1回、月曜は前週の週次下書きを作って見解・推敲・点検まで。**公開・push はしない**（draft のまま残る）。手順は `plan/operations.md`、履歴は `plan/log.md`。
+- 毎日 `collect.py` を1回、月曜は前週の週次記事を作って見解・推敲・点検まで行い、通れば公開して push（ユーザー指示 2026-11-24）。手順は `plan/operations.md`、履歴は `plan/log.md`。
+
+## 公開（2026-11-24）
+- GitHub: 匿名アカウント `pocketlog-note` の公開リポジトリ `nyusatsu-watch`（ポケットログと同じアカウント。ユーザー判断）。公開URL: https://pocketlog-note.github.io/nyusatsu-watch/
+- コミットの作者は `pocketlog-note` と noreply アドレス（ローカル設定）。公開前に、それまでの5件のコミットの作者を個人アドレスから書き換えた。個人のメールアドレスを出さない。
+- ブランチは `main`。
 - タスクの中身を変えるときはアプリの「Scheduled」から（`~\.claude\scheduled-tasks\` を直接編集しない）。手順の細部は `plan/operations.md` を直せばよい。
 - サンプル記事 `2026-11-23-hyojunka-1sha.md` は架空の数字なので `draft: true` のまま。公開しない。
 

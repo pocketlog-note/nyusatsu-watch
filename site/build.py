@@ -51,7 +51,7 @@ PAGES_SRC = ROOT / "pages"
 OUT = ROOT / "docs"
 XOUT = ROOT / "x-drafts"
 
-SITE_URL = "https://example.github.io/nyusatsu-watch"  # 公開先が決まったら変える（check.py が警告する）
+SITE_URL = "https://pocketlog-note.github.io/nyusatsu-watch"  # 独自ドメインにしたらここを変える
 SITE_NAME = "入札ウォッチ"
 SITE_TAGLINE = "自治体IT調達を、公告データで読む"
 SITE_DESC = "自治体のIT調達の公告を集計し、数字で伝えるニュースサイトです。"

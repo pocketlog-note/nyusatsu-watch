@@ -25,16 +25,19 @@
    - 特定の団体・企業を責めない。件数の増減の理由を断定しない。
 5. yomiyasu スキルで記事を推敲する（種類は article）。推敲前の本文を `_text/<日付>-src.md`、推敲後を `_text/<日付>-final.md` に置き、`yomiyasu_check.py run` と `verify` を実行してから記事に反映する。
 6. `python -X utf8 check.py --all` でこの記事がエラー0件になること。`$env:INCLUDE_DRAFTS=1; python -X utf8 build.py` が通ること。
-7. **`draft: true` は外さない。** 公開先（GitHub のリポジトリ）がまだないため。公開はユーザーが判断する。
+7. 手順2〜6がすべて通ったら `draft: true` の行を消して公開する（ユーザーの指示 2026-11-24「公開までやっちゃっていいよ」）。通らないときは draft のまま残し、理由を記録と完了報告に書く。
+8. 公開した記事は、push のあと数分おいて https://pocketlog-note.github.io/nyusatsu-watch/ で表示を確かめる。
 
 ## 3. 記録とコミット
 1. `plan/log.md` に、日付・取得件数（新規／テーマに合う自治体の公告）・作った下書き・気づいたことを1〜3行で追記する。
-2. `git add -A` → `git commit`（メッセージは「何を・なぜ」を1行）。**push はしない**（リモートがまだない）。
+2. `git add -A` → `git commit`（メッセージは「何を・なぜ」を1行）→ `git push`。push すると GitHub Actions が点検とビルドをして GitHub Pages に公開する（公開リポジトリ `pocketlog-note/nyusatsu-watch`）。
+   - コミットの作者は匿名アカウントの非公開用アドレス（リポジトリのローカル設定済み）。`git config --local user.email` が `...@users.noreply.github.com` でなければ push しない。
 3. 完了報告は「何をしたか／確認できたこと／未確認のこと」に分けて短く書く。ユーザーの確認が要る下書きがあれば最初に書く。
 
 ## やってはいけないこと
 - API への問い合わせを1回の実行で何度も繰り返すこと（`collect.py` の実行は1回まで）。
 - 出典のない数字を記事に書くこと。架空のデータを実データの記事に混ぜること。
-- `draft: true` を外すこと、push、アカウント作成、外部への投稿（X を含む）。
+- 手順2の点検を通っていない記事の `draft: true` を外すこと。1回の実行で記事を2本以上公開すること。
+- アカウント作成、X など外部への投稿（X は投稿文の下書き `site/x-drafts/` を作るところまで。投稿は人が行う）。
 - `site/content/2026-11-23-hyojunka-1sha.md`（架空の数字のサンプル）を公開対象にすること。
 - `git push --force` と履歴の書き換え。
