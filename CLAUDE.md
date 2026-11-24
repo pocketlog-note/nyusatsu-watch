@@ -33,6 +33,11 @@
 - 判定の規則: 検索条件と件名の絞り込みは `queries.json`（`title_pattern`／`exclude_pattern`）。自治体かどうかは `collect.py` の `org_type`（機関名が「京都府京都市」のように都道府県名から始まるか等。国の機関にも市区町村コードが付くことがあるので、コードだけで判定しない）。規則を直したら `python collect.py --reclassify` で保存済みの全件に当て直す。
 - 2026-11-23 時点: 11/9〜11/22 の2週間分 1,071件を取得。自治体のIT関連は 11/16〜22 が14件、前の週が9件。週次の下書き `content/2026-11-22-weekly-it.md` は実データで、見解まで書いてある（draft のまま）。
 - `data/raw/`（API の応答そのまま）は git 管理外。
+
+## 定期運用（2026-11-23 開始）
+- 定期タスク `nyusatsu-watch-daily`（毎日10時30分ごろ。Claude アプリが起動中のとき。閉じていれば次回起動時）。Auto モードで保存。
+- 毎日 `collect.py` を1回、月曜は前週の週次下書きを作って見解・推敲・点検まで。**公開・push はしない**（draft のまま残る）。手順は `plan/operations.md`、履歴は `plan/log.md`。
+- タスクの中身を変えるときはアプリの「Scheduled」から（`~\.claude\scheduled-tasks\` を直接編集しない）。手順の細部は `plan/operations.md` を直せばよい。
 - サンプル記事 `2026-11-23-hyojunka-1sha.md` は架空の数字なので `draft: true` のまま。公開しない。
 
 ## よく使うコマンド
