@@ -21,7 +21,18 @@
   - 点検: `python check.py`（`--all` で下書きも）。公開対象にエラーがあると終了コード1
   - 本番ビルド: `python build.py`／下書き込み: `$env:INCLUDE_DRAFTS=1; python build.py`
   - プレビュー: `.claude/launch.json` の `site-preview`（http://localhost:8124）
-- 未決・未着手（ユーザーの指示が要る）: GitHub アカウントとリポジトリ（匿名にするか）、`SITE_URL`、独自ドメイン、X アカウント、PNG 化（Pillow の追加が必要）、公告データの自動収集。
+- 未決・未着手（ユーザーの指示が要る）: GitHub アカウントとリポジトリ（匿名にするか）、`SITE_URL`、独自ドメイン、X アカウント、PNG 化（Pillow の追加が必要）、収集と下書き作成の定期実行。
+
+## 公告データの収集（2026-11-23 作成）
+- データ源: 官公需情報ポータルサイト（中小企業庁）の検索API `http://www.kkj.go.jp/api/`。仕様は https://www.kkj.go.jp/doc/ja/api_guide.pdf （V1.1）。国・都道府県・市区町村の**公告**が取れる。**落札結果・応札者数・落札率は取れない**（1者応札率の記事はこのデータだけでは書けない）。開札日もほとんど入っていない。
+- 利用規約（https://www.kkj.go.jp/s/?tc=1 、2024-06-25 改定）: API を使うサイトは「API を用いている旨」とポータルへのリンクを載せる（フッターと about.md に記載済み）。同じサーバーから継続して大量にアクセスしない → 問い合わせは順番に、間を5秒あける。1日に数回まで。二次利用・転載についての定めは規約にない。
+- 流れ（site フォルダで実行。`python -X utf8` を付けると表示が文字化けしない）
+  1. `python collect.py`（直近7日）／`python collect.py 2026-11-01 2026-11-22`（期間指定）→ `data/notices.jsonl` に重複なく追記
+  2. `python draft_weekly.py [終了日]` → `content/<終了日>-weekly-it.md`（draft、見解は【要確認】）と `data/reports/<終了日>.json`
+  3. ミハルの見解を書いて【要確認】を消す → yomiyasu で推敲 → `python check.py --all` → 人が確認して `draft: true` を外す
+- 判定の規則: 検索条件と件名の絞り込みは `queries.json`（`title_pattern`／`exclude_pattern`）。自治体かどうかは `collect.py` の `org_type`（機関名が「京都府京都市」のように都道府県名から始まるか等。国の機関にも市区町村コードが付くことがあるので、コードだけで判定しない）。規則を直したら `python collect.py --reclassify` で保存済みの全件に当て直す。
+- 2026-11-23 時点: 11/9〜11/22 の2週間分 1,071件を取得。自治体のIT関連は 11/16〜22 が14件、前の週が9件。週次の下書き `content/2026-11-22-weekly-it.md` は実データで、見解まで書いてある（draft のまま）。
+- `data/raw/`（API の応答そのまま）は git 管理外。
 - サンプル記事 `2026-11-23-hyojunka-1sha.md` は架空の数字なので `draft: true` のまま。公開しない。
 
 ## よく使うコマンド

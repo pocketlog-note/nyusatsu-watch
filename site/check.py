@@ -27,6 +27,8 @@ def check_post(p):
         errors.append(f"lines は2行まで・1行{LINE_MAX}字程度まで: {lines}")
     if len(bubble) > 2 or any(width(s) > BUBBLE_MAX for s in bubble):
         errors.append(f"bubble は2行まで・1行{BUBBLE_MAX}字程度まで: {bubble}")
+    if build.PLACEHOLDER.search(p["html"]):
+        errors.append("【要確認】が残っている（見解などを書いて目印を消す）")
     if not info["lead"]:
         errors.append("リード（最初の段落）がない")
     if len(info["facts"]) < 3:

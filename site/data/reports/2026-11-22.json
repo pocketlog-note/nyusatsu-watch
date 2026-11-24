@@ -1,0 +1,212 @@
+{
+ "period": [
+  "2026-11-16",
+  "2026-11-22"
+ ],
+ "week": {
+  "total": 14,
+  "hyojunka": 2,
+  "by_type": {
+   "市区町村": 11,
+   "都道府県": 3
+  },
+  "by_pref": [
+   [
+    "宮城県",
+    4
+   ],
+   [
+    "大阪府",
+    2
+   ],
+   [
+    "香川県",
+    2
+   ],
+   [
+    "東京都",
+    2
+   ],
+   [
+    "宮崎県",
+    1
+   ]
+  ],
+  "orgs": 12
+ },
+ "prev_week": {
+  "total": 9,
+  "hyojunka": 0,
+  "by_type": {
+   "市区町村": 6,
+   "都道府県": 3
+  },
+  "by_pref": [
+   [
+    "山形県",
+    2
+   ],
+   [
+    "三重県",
+    1
+   ],
+   [
+    "東京都",
+    1
+   ],
+   [
+    "香川県",
+    1
+   ],
+   [
+    "奈良県",
+    1
+   ]
+  ],
+  "orgs": 8
+ },
+ "notices": [
+  {
+   "issue_date": "2026-11-16",
+   "org": "大阪府大阪市",
+   "org_type": "市区町村",
+   "title": "統一地方選挙用投開票集計システム端末買入",
+   "url": "https://www.city.osaka.lg.jp/templates/buppin_nyusatsuanken/cmsfiles/contents/0000691/691702/kokokubun.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-16",
+   "org": "大阪府門真市",
+   "org_type": "市区町村",
+   "title": "郵送期限：11月30日 令和8年度デジタル複合機更新に伴うソフトウェア等賃貸借",
+   "url": "https://www.city.kadoma.osaka.jp/material/files/group/79/zissiyouryo00.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-16",
+   "org": "香川県",
+   "org_type": "都道府県",
+   "title": "香川県児童相談所システムの調達に係る意見等の招請について",
+   "url": "https://www.pref.kagawa.lg.jp/documents/62384/01_ikennsyousei.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "宮城県塩竃市",
+   "org_type": "市区町村",
+   "title": "内部情報システムサーバー等機器賃貸借",
+   "url": "https://www.city.shiogama.miyagi.jp/uploaded/life/59746_154342_misc.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "宮城県富谷市",
+   "org_type": "市区町村",
+   "title": "令和８～１１年度 富谷市議会録画中継インターネット映像配信業務及び会議録検索システム業務",
+   "url": "https://www.tomiya-city.miyagi.jp/uploads/pdf/074bbdb193291c67bfbcffbbbc89a63291d15ff5.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "宮城県富谷市",
+   "org_type": "市区町村",
+   "title": "令和９～１３年度 富谷市立保育所（４所）登降園管理システム保守管理業務",
+   "url": "https://www.tomiya-city.miyagi.jp/uploads/pdf/26c3bb436cee129834dc6ca916cc2cba33a9b372.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "宮崎県宮崎市",
+   "org_type": "市区町村",
+   "title": "登記課税連携システム機器賃貸借に係る条件付一般競争入札を実施します",
+   "url": "https://www.city.miyazaki.miyazaki.jp/fs/9/0/2/3/0/9/_/01____________________.docx.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "東京都目黒区",
+   "org_type": "市区町村",
+   "title": "図書館情報システム構築等業務委託事業者を公募型プロポーザル方式により募集します",
+   "url": "https://www.city.meguro.tokyo.jp/documents/20619/tosyokanrfp-bosyuyoukou-2.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-18",
+   "org": "香川県",
+   "org_type": "都道府県",
+   "title": "香川県教職員人事システムの調達に係る意見招請について",
+   "url": "https://www.pref.kagawa.lg.jp/documents/64717/rfc.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-19",
+   "org": "鹿児島県鹿児島市",
+   "org_type": "市区町村",
+   "title": "市役所WANメールアーカイブシステム構築等業務委託契約に係る制限付き一般競争入札(公告)",
+   "url": "https://www.city.kagoshima.lg.jp/soumu/soumu/jousys/koukoku/documents/01_mailarchive_kokuji.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-20",
+   "org": "宮城県石巻市",
+   "org_type": "市区町村",
+   "title": "令和8年度石巻市立桜坂高等学校教育用サーバ、コンピュータ及び周辺機器賃貸借",
+   "url": "https://www.city.ishinomaki.lg.jp/cont/20102000/nyusatsu/0002/nyuusatukoukoku.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-20",
+   "org": "富山県",
+   "org_type": "都道府県",
+   "title": "【令和8年11月20日公告】令和8年度富山県共同利用型基幹系業務システムデータパンチ等業務に係る条件付き一般競争入札の実施について",
+   "url": "https://www.pref.toyama.jp/documents/58352/01_koukoku.pdf",
+   "topics": [
+    "hyojunka",
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-20",
+   "org": "東京都世田谷区",
+   "org_type": "市区町村",
+   "title": "LINEサービスを活用したSNS相談システムの 導入及び運用保守業務委託 プロポーザル実施について",
+   "url": "https://www.city.setagaya.lg.jp/documents/36868/01.pdf",
+   "topics": [
+    "system"
+   ]
+  },
+  {
+   "issue_date": "2026-11-20",
+   "org": "長野県御代田町",
+   "org_type": "市区町村",
+   "title": "令和８年度共同利用型コンビニ交付システムリース業務（長期継続契約）",
+   "url": "https://www.town.miyota.nagano.jp/file/186830.pdf",
+   "topics": [
+    "hyojunka",
+    "system"
+   ]
+  }
+ ]
+}

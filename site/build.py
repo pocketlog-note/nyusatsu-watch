@@ -54,7 +54,9 @@ XOUT = ROOT / "x-drafts"
 SITE_URL = "https://example.github.io/nyusatsu-watch"  # 公開先が決まったら変える（check.py が警告する）
 SITE_NAME = "入札ウォッチ"
 SITE_TAGLINE = "自治体IT調達を、公告データで読む"
-SITE_DESC = "自治体のIT調達の公告と入札結果を集計し、数字で伝えるニュースサイトです。"
+SITE_DESC = "自治体のIT調達の公告を集計し、数字で伝えるニュースサイトです。"
+API_CREDIT_HTML = ('公告データは<a href="https://www.kkj.go.jp/s/" target="_blank" rel="noopener">官公需情報ポータルサイト</a>'
+                   'の検索APIを用いて取得しています。')  # 同サイトの利用規約で、API を使う旨の明記とリンクが求められている
 COLOR = "#0b5cad"
 CHAR_NAME = "ミハル"
 CHAR_BIO = "入札ウォッチの記者フクロウ。夜通し公告を読んでいます。数字を先に、意見はあとに。"
@@ -244,7 +246,7 @@ def layout(*, title, desc, inner, prefix, url, og_type="website", full_title=Non
 <nav><a href="{prefix}index.html">ニュース</a><a href="{prefix}about.html">このサイトについて</a></nav>
 </div></header>
 {inner}
-<footer><div class="bar"><span>© {datetime.now(JST).year} {SITE_NAME}</span>
+<footer><div class="bar"><span>© {datetime.now(JST).year} {SITE_NAME}　{API_CREDIT_HTML}</span>
 <nav><a href="{prefix}about.html">このサイトについて</a><a href="{prefix}feed.xml">RSS</a></nav></div></footer>
 </body></html>"""
 
