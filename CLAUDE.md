@@ -12,6 +12,18 @@
 - Python 3.10 標準ライブラリのみ（`tools/make_eyecatch.py`）
 - 投稿の仕組みは `play\pocket-log` のものを流用する予定
 
+## 入札ウォッチ（site/）の公開の仕組み
+- 公開先は「自前サイト＋X」に決定（2026-11-23）。構成は play\pocket-log と同じ: `site/content/*.md` → `site/build.py` → `site/docs/` → GitHub Actions（`.github/workflows/pages.yml`）で GitHub Pages。
+- 記事の書き方は `site/build.py` の冒頭。`:::facts`（各行「- 事実｜出典」）、`:::opinion 見出し`、`:::next`、`:::method` のブロックで書く。
+- ビルドすると `site/docs/images/eyecatch/<slug>.svg`（アイキャッチ）と `site/x-drafts/<slug>.txt`（X 投稿文の下書き）も作られる。X への投稿は当面手動。
+- 公開されない条件: `draft: true`／`date` が未来（予約公開）／本文に【要確認】が残っている。
+- コマンド（site フォルダで実行。`$env:PYTHONIOENCODING="utf-8"` を付けると文字化けしない）
+  - 点検: `python check.py`（`--all` で下書きも）。公開対象にエラーがあると終了コード1
+  - 本番ビルド: `python build.py`／下書き込み: `$env:INCLUDE_DRAFTS=1; python build.py`
+  - プレビュー: `.claude/launch.json` の `site-preview`（http://localhost:8124）
+- 未決・未着手（ユーザーの指示が要る）: GitHub アカウントとリポジトリ（匿名にするか）、`SITE_URL`、独自ドメイン、X アカウント、PNG 化（Pillow の追加が必要）、公告データの自動収集。
+- サンプル記事 `2026-11-23-hyojunka-1sha.md` は架空の数字なので `draft: true` のまま。公開しない。
+
 ## よく使うコマンド
 - プレビュー: `python -m http.server 8765`（`.claude\launch.json` に登録済み）→ http://localhost:8765
 - アイキャッチ生成: `python tools/make_eyecatch.py eyecatch/01-nyusatsu.json`（1ファイルずつ）

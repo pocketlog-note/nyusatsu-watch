@@ -12,3 +12,5 @@ build/
 Thumbs.db
 .claude/settings.local.json
 .yomiyasu/
+site/docs/
+site/x-drafts/

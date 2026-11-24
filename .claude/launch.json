@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "mock", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8765"], "port": 8765 }
+    { "name": "mock", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8765"], "port": 8765 },
+    { "name": "site-preview", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8124", "--directory", "site/docs"], "port": 8124 }
   ]
 }
