@@ -4,11 +4,18 @@
   python check.py         公開対象の記事だけ点検（CI でも実行）
   python check.py --all   下書きも含めて点検
 """
+import re
 import sys
 
 import build
 
 LINE_MAX, BUBBLE_MAX = 16, 9   # アイキャッチの1行あたりの目安（全角）
+MIN_CHARS, MAX_CHARS = 3000, 8000   # 本文の文字数（タグと空白を除く）。SEO 記事の目安
+
+
+def body_chars(html_text):
+    text = re.sub(r"<[^>]+>", "", html_text)
+    return len(re.sub(r"\s", "", text))
 
 
 def width(s):
@@ -29,6 +36,11 @@ def check_post(p):
         errors.append(f"bubble は2行まで・1行{BUBBLE_MAX}字程度まで: {bubble}")
     if build.PLACEHOLDER.search(p["html"]):
         errors.append("【要確認】が残っている（見解などを書いて目印を消す）")
+    chars = body_chars(p["html"])
+    if chars < MIN_CHARS:
+        errors.append(f"本文が短い（{chars}字。{MIN_CHARS}字以上）")
+    elif chars > MAX_CHARS:
+        warns.append(f"本文が長い（{chars}字。目安は{MAX_CHARS}字まで）")
     if not info["lead"]:
         errors.append("リード（最初の段落）がない")
     if len(info["facts"]) < 3:

@@ -37,7 +37,7 @@ COUNT = 1000          # API の上限
 JST = timezone(timedelta(hours=9))
 
 PREF_HEAD = re.compile(r"^(北海道|東京都|京都府|大阪府|[^\s都道府県]{2,3}県)(.*)$")
-NATIONAL = re.compile(r"^(国|内閣|衆議院|参議院|最高裁判所|会計検査院|人事院)|省|庁|裁判所|独立行政法人|国立研究開発法人|国立大学法人|大学共同利用機関|機構|日本司法支援センター")
+NATIONAL = re.compile(r"^(国|内閣|衆議院|参議院|最高裁判所|会計検査院|人事院)|省|庁|裁判所|独立行政法人|国立研究開発法人|国立大学法人|大学共同利用機関|機構|日本司法支援センター|学園$")
 LOCAL_TAIL = re.compile(r"(市|区|町|村)(役所|役場)?$|広域連合|一部事務組合|事務組合|企業団|消防組合")
 
 
@@ -94,7 +94,7 @@ def daterange(start, end):
 
 
 def collect_query(q, start, end, raw_dir):
-    """1つの検索条件で期間内の公告を集める。1,000件を超えたら1日ずつに分けて取り直す。"""
+    """1つの検索条件で期間内の公告を集める。1,000件を超えたら期間を半分に分けて取り直す（問い合わせ回数を抑えるため）。"""
     params = {"Query": q["query"], "CFT_Issue_Date": f"{start}/{end}", "Count": COUNT}
     params.update(q.get("params", {}))
     hits, results = fetch(params, raw_dir, f"{q['id']}_{start}_{end}")
@@ -103,10 +103,11 @@ def collect_query(q, start, end, raw_dir):
         if hits > len(results):
             print(f"  注意: {start} は {hits}件あり、{len(results)}件しか取れていません（検索条件を絞ってください）")
         return results
+    mid = start + (end - start) // 2
     out = []
-    for d in daterange(start, end):
+    for a, b in ((start, mid), (mid + timedelta(days=1), end)):
         time.sleep(WAIT_SEC)
-        out += collect_query(q, d, d, raw_dir)
+        out += collect_query(q, a, b, raw_dir)
     return out
 
 

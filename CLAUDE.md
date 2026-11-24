@@ -38,6 +38,12 @@
 - 定期タスク `nyusatsu-watch-daily`（毎日10時30分ごろ。Claude アプリが起動中のとき。閉じていれば次回起動時）。Auto モードで保存。
 - 毎日 `collect.py` を1回、月曜は前週の週次記事を作って見解・推敲・点検まで行い、通れば公開して push（ユーザー指示 2026-11-24）。手順は `plan/operations.md`、履歴は `plan/log.md`。
 
+## 週次記事（2026-11-24 改定）
+- 週次まとめのみ（日次はやめた。ユーザー判断）。本文は3,000〜8,000字（SEO の目安。check.py で検査）。
+- 自動: 推移（直近8週）、直近4週の動き、団体・分野・調達の形・地域の内訳、公告の一覧、用語の解説（`site/glossary.json`）。手書き: 注目の案件3件と見解。
+- 集計の前に、同じ団体・同じ件名の45日以内の重複と、件名の年度が古い再登録を除く（`draft_weekly.py` の `dedupe`／`stale`）。
+- 公開時に過去3か月分（8/24〜11/22の13週）を作成して公開した。手書き部分は `_text/weekly_manual.py`、差し込みは `_text/splice_manual.py`。
+
 ## 公開（2026-11-24）
 - GitHub: 匿名アカウント `pocketlog-note` の公開リポジトリ `nyusatsu-watch`（ポケットログと同じアカウント。ユーザー判断）。公開URL: https://pocketlog-note.github.io/nyusatsu-watch/
 - コミットの作者は `pocketlog-note` と noreply アドレス（ローカル設定）。公開前に、それまでの5件のコミットの作者を個人アドレスから書き換えた。個人のメールアドレスを出さない。
